@@ -1,0 +1,21 @@
+# The CI path: commit -> checker.py runs -> merge, or blocked with a failure report.
+name: guardrails
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check the source against the rules
+        run: python guardrails/checker.py --ci
+      - name: Fail drafts must fail, pass drafts must pass
+        run: python guardrails/checker.py --examples
+      - name: Unit tests
+        run: python -m unittest discover -s guardrails/tests -v

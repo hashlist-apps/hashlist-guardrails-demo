@@ -1,0 +1,38 @@
+name: AI failure
+description: Report code an AI assistant got wrong. This is step 1 (Capture) of the loop.
+title: "AI failure: "
+labels: ["ai-failure"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Demo template. Describe what the assistant did and what was expected.
+        Do not paste secrets or proprietary source. A short excerpt is enough.
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt
+      description: The request you gave the assistant.
+    validations:
+      required: true
+  - type: textarea
+    id: trace
+    attributes:
+      label: Agent trace
+      description: The steps or reasoning the assistant showed. If you can, mark the first step that looks wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What the correct answer or behaviour is, and where that comes from (board data, spec, standard).
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Files
+      description: Paths of the files involved.
+    validations:
+      required: true

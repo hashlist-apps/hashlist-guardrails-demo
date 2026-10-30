@@ -1,0 +1,7 @@
+---
+description: Hashlist guardrail files for this repository
+alwaysApply: true
+---
+
+Read guardrails/rules.md before writing or changing code. Look up values in guardrails/golden-answers.jsonl before using a datasheet value.
+Run `python guardrails/checker.py` before you answer and fix every failure. Full instructions: AGENTS.md

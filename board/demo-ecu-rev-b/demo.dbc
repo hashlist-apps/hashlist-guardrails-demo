@@ -1,0 +1,16 @@
+VERSION "demo-ecu rev B, DEMO DATA, fictional"
+
+NS_ :
+
+BS_:
+
+BU_: BRK GW
+
+BO_ 420 BRK_STATUS: 8 BRK
+ SG_ BrakePressure : 7|12@0+ (0.1,0) [0|409.5] "bar" GW
+ SG_ BrakeActive : 20|1@1+ (1,0) [0|1] "" GW
+ SG_ AliveCounter : 48|4@1+ (1,0) [0|14] "" GW
+ SG_ Crc : 56|8@1+ (1,0) [0|255] "" GW
+
+BO_ 421 BRK_LIGHT_REQ: 2 GW
+ SG_ BrakeLightReq : 0|1@1+ (1,0) [0|1] "" BRK

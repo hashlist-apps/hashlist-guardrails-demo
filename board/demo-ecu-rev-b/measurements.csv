@@ -1,0 +1,8 @@
+# DEMO DATA. Fictional board "demo-ecu rev B". Not a real product.
+# Bring-up measurements taken with a scope and a roller dyno on the demo bench.
+name,value,unit,symbol,source
+pmic_3v3_settle,410,us,PMIC_3V3_SETTLE_US,scope capture of 3V3 rail to power-good
+can_phy_wake,35,us,CAN_PHY_WAKE_US,scope capture of STB pin to first valid RXD edge
+hse_startup,1800,us,HSE_STARTUP_US,scope capture of oscillator enable to stable clock
+roller_check_indicated,101.2,km/h,,roller dyno ECU reading with sheet scale 0.01
+roller_check_true,100.0,km/h,,roller dyno reference speed
